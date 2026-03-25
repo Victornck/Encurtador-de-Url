@@ -29,6 +29,12 @@ public class UrlController {
     public ResponseEntity<UrlShortenResponsedto> shortenUrl(@RequestBody UrlRequestdto request, HttpServletRequest servletRequest){
 
         String id;
+
+        if (request.url() == null || request.url().isBlank() || !request.url().startsWith("http://") && !request.url().startsWith("https://")) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+        }
+
+
         do {
             id = RandomStringUtils.randomAlphanumeric(5,10);
         }
