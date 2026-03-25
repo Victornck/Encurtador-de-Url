@@ -1,4 +1,4 @@
-# 🔗 Encurtador de URL
+# Encurtador de URL
 
 Projeto desenvolvido com **Java + Spring Boot + MongoDB** que permite encurtar URLs e redirecioná-las de forma simples e eficiente.
 
